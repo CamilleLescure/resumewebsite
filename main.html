@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Camille Lescure</title>
+        <!-- Polices -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+        <!-- CSS Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- Javascript -->
+ 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+       <!-- <script type="text/javascript">
+        $(window).load(function() {
+            $(".loader").fadeOut("100");
+        })
+        </script>-->
+<!-- In footer -->
+
+        
+        <style>
+            body{
+                font-family:'Poppins';
+                font-size:1.5em;
+            }
+
+            .title{
+                border-top-style:solid;
+                border-bottom-style: solid;
+                font-family:'Oleo Script';
+                font-size:5em;
+                text-align:center;
+            }
+            h3{
+                font-size:0.7em;
+            }
+            .about{
+                padding-bottom:100px;       
+            }
+        
+            .soustitre{
+                text-align:center;
+                padding-bottom:20px;
+            }
+            .intro{
+                justify-content: space-around;
+            }
+            .introduction{
+                margin-top:70px;
+                border-style:solid;
+                border-color:rgb(44,55,72,0.4);
+            }
+            .introduction span{
+             color:#888;
+             font-size:85%;
+            }
+            
+            .project{
+                text-align:justify; 
+                padding-top:50px;
+                margin-right:auto;
+                margin-left:auto;
+                width:600px;
+            }
+            #experiences, #formations, #competences{
+                padding-top:70px;
+                padding-bottom:100px;
+                font-size:1.5em;
+            }
+            .hobbies{
+                justify-content:space-around;
+                padding-top:70px;
+            }
+            .description{
+                text-align:justify;
+            }
+            .progress-bar-description{
+                font-size:0.6em;
+            }
+            .progress-bar{
+                background-color:rgb(44,55,72);
+            }
+            .parallax{
+                 background-image:url('fond1.jpg');
+                 min-height:1000px; background-attachment:fixed; background-position:center;background-repeat:no-repeat; background-size:cover;
+                 padding-top:350px;
+                text-align:center;
+            }
+            .experience, .formation {
+             border-left:1px solid #e5e5e5;
+             position:relative;
+             padding:2rem 1.5rem .5rem 2.5rem;
+             font-size:.9rem;
+             margin-left:3rem;
+             min-height:5rem
+            }
+            .experience:last-child, .formation:last-child {
+             padding-bottom:4rem
+            }
+            .experience .experienceDate, .formation .formationDate {
+             margin-bottom:.5rem
+            }
+            .experience .experienceDate span, .formation .formationDate span {
+             color:#888;
+             font-size:85%;
+             padding-left:.4rem
+            }
+            .experience .experienceDescription, .formation .formationDescription{
+             padding:.5rem .8rem;
+             background-color:#f4f4f4;
+             border-radius:.5rem;
+                text-align:justify;
+            }
+            .experience .experienceDescription span, .formation .formationDescription span{
+             display:block;
+             color:#888;
+             font-size:85%;
+            }
+            .experience .experienceIcone, .formation .formationIcone {
+             line-height:2.6rem;
+             position:absolute;
+             left:-1.3rem;
+             width:2.6rem;
+             height:2.6rem;
+             text-align:center;
+             border-radius:50%;
+             font-size:1.1rem;
+             background-color:#fff;
+             color:#fff;
+             border:1px solid #e5e5e5;
+             font-size:.6rem;
+            }
+            @media(max-width:985px){
+                .navbar{
+                    display:none;
+                }
+            }
+            @media(min-width:992px) {
+             .experience, .formation {
+              margin-left:10rem;
+             }
+             .experience .experienceDate, .formation .formationDate {
+              position:absolute;
+              left:-10rem;
+              width:7.5rem;
+              text-align:right;
+              font-size:1em;
+             }
+             .experience .experienceDate span, .formation .formationDate span {
+              display:block;
+             }
+             .experience .experienceDescription, .formation .formationDescription {
+              padding:0;
+              background-color:transparent;
+              font-size:1.5em;
+             }
+             .programmation{
+                 justify-content: center;
+             }
+            .twolanguages{
+                justify-content: space-around;
+                vertical-align:midde;
+            }
+            #hobby{
+                margin-bottom:100px;
+            }
+            .icone{
+                width:250px;
+                height:250px;
+                border-style:solid;
+                border-radius:120px;
+                text-align:center;
+                line-height:225px;
+                cursor: pointer;
+                margin-bottom:100px;
+                font-family: 'Berkshire Swash', cursive;
+                font-size:2.5em;
+                opacity: 
+            }
+            .listeimage{
+                justify-content: space-between;
+            }
+            .myli1{
+                list-style:none;
+                padding:20px;
+                background-color:rgb(157, 160, 165,0.3);
+            }
+            .myli2{
+                list-style:none;
+                padding:20px;
+            }
+            #scrollUp
+            {
+                position: fixed;
+                bottom : 10px;
+            }
+            
+            #pageloader {
+                position : fixed;
+                z-index: 9999;
+                background : url('load.gif') 50% 50% no-repeat;
+                top : 0px;
+                left : 0px;
+                height : 100%;
+                width : 100%;
+                cursor : wait;
+            }
+            .baspage{
+                height:150px;
+                vertical-align:middle;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="parallax" id="parallax">
+            <h1 style="font-size:7em; margin-top:100px">Camille Lescure </h1>
+            <h2 style="font-size:1.8em"> Ingénieure généraliste diplomée de l'Ecole des Mines d'Albi-Carmaux</h2>
+            <h2 style="font-size:1.8em"> à la recherche d'un poste de développeur junior</h2>
+        </div>  
+
+       <nav class="navbar navbar-expand-lg sticky-top" style="background-color:#707176">
+          <div class="collapse navbar-collapse" style="justify-content:space-around" id="navbarNavAltMarkup">
+            <div class="navbar-nav" >
+              <a class="nav-item nav-link" style="color:white" href="#apropos">A propos</a>
+              <a class="nav-item nav-link" style="color:white" href="#experiences">Expériences</a>
+              <a class="nav-item nav-link" style="color:white" href="#formation">Formations</a>
+              <a class="nav-item nav-link" style="color:white" href="#competence">Compétences</a>
+              <a class="nav-item nav-link" style="color:white" href="#loisirs">Loisirs</a>
+            </div>
+          </div>
+        </nav>
+        <div id="scrollUp">
+				<a href="#parallax"><img height="40px" width="40px" src="top.png"/></a>
+		</div>
+        
+        <div class="container">  
+ 
+            <div class="autre">
+                <div class="col-sm-12 about">
+                    <div class="title" id="apropos">
+                        <h3> A propos </h3>
+                    </div>
+                    <div class="row intro">
+                        <div class="col-sm-3 introduction" style="word-break:break-all">
+                           <span>Nom </span> <br> Camille Lescure <br>
+                           <span>Date de naissance </span> <br> 11 Mars 1997 <br>
+                            <span>Adresse </span> <br> 1 rue de Pontarlier <br> 25600 Sochaux<br>
+                            <span>Mail</span><br>cam.lescure@gmail.com <br>
+                            <span>Téléphone</span><br>06 08 12 38 48
+                        </div>
+                        <div>
+                            <img src="camille.png" alt="profilepicture"></img>
+                        </div>
+                    </div>
+                <div class="project">
+                        Après 2 ans de cours généralistes à l'<strong>Ecole des Mines d'Albi</strong>, j'ai choisi en 3ème l'année l'option génie des systèmes d'information.
+                        Cette option m'a permis de découvrir le fonctionnement général d'applications web et de progresser en programmation. J'ai alors réalisé un  
+                        stage de 6 mois chez <strong>Taxi Butler</strong> à Amsterdam en tant que développeur junior, et cherche désormais un poste fixe, en France. 
+                </div>
+            </div>
+            <div class="col-sm-12" id="experience">
+                <div class="title"  id="exp">
+                    <h3>Expériences</h3>
+                </div>
+                <div id="experiences">
+                    <div class="listExperience">
+                        <div class="experience">
+                            <div class="experienceIcone">  
+                            </div>
+                            <div class="experienceDate">
+                                Mars à Août 2019
+                            </div>
+                            <div class="experienceDescription">
+                                Développeur junior, Taxi Butler (Amsterdam)<br>
+                                   <span>  Implémenter de nouvelles fonctionnalités à un portail de management afin de le rendre plus efficace et plus attractif.
+                                     Envoi automatique mensuellement d'email statistiques.  
+                                     Programmation back-end (Java) et front-end (HTML, CSS, Javascript). Apprentissage du fonctionnement en micro-service. Utilisation d'api SOAP et REST.</span> 
+                            </div>
+                        </div>
+                        <div class="experience">
+                            <div class="experienceIcone">  
+                            </div>
+                            <div class="experienceDate">
+                                Novembre 2018 à Février 2019
+                            </div>
+                            <div class="experienceDescription">
+                                Développeur junior (Centre Génie industriel, Mines Albi)<br>
+                                   <span>Avec 4 autres étudiants de mon option, concevoir et coder une application WEB à destination du centre génie industriel de l'Ecole des Mines d'Albi. Cette 
+                                application leur permet de gérer leur rédaction de communication et de publication, ainsi que de visualiser l'ensemble des potentielles sources de publication 
+                                de leurs papiers. J'étais majoritairement en charge de la programmation Front-End. </span> 
+                            </div>
+                        </div>
+                        <div class="experience">
+                            <div class="experienceIcone">  
+                            </div>
+                            <div class="experienceDate">
+                                Mai à Août 2018
+                            </div>
+                            <div class="experienceDescription">
+                                Assistant chef de projet matériel, Laboratoires Anios (Lille)<br>
+                                   <span> Assister un chef de projet sur des tâches quotidiennes, réaliser un état de l'art de choix techniques, une étude de faisabilité et un cahier des charges.</span> 
+                            </div>
+                        </div>
+                         <div class="experience">
+                            <div class="experienceIcone">  
+                            </div>
+                            <div class="experienceDate">
+                                Septembre 2017 à Février 2018
+                            </div>
+                            <div class="experienceDescription">
+                                Chef de projet, Vita Mirror (Albi)<br>
+                                   <span> Aider une start-up orientée sur le développement de miroirs connectés en établissant une étude marketing puis un cahier des charges. Gérer une équipe de 7 étudiants, organiser et diriger des réunions, planifier un projet de 6 mois.</span> 
+                            </div>
+                        </div>
+                        <div class="experience">
+                            <div class="experienceIcone">  
+                            </div>
+                            <div class="experienceDate">
+                                Février 2017
+                            </div>
+                            <div class="experienceDescription">
+                                Opérateur, Fuji Autotech (Mandeure)<br>
+                                   <span> Découvrir le secteur automobile, comprendre le fonctionnement d'une ligne de production, suivre un protocole, acquérir des compétences sur la santé et sécurité au travail, communiquer avec les opérateurs et s'informer sur leur vision de leur métier et leur management actuel.</span> 
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-sm-12" id="formation">
+                <div class="title" id="form">
+                    <h3>Formations</h3>
+                </div>
+                <div id="formations">
+                    <div class="listeFormations">
+                        <div class="formation">
+                            <div class="formationIcone">  
+                            </div>
+                            <div class="formationDate">
+                                2016-2019
+                            </div>
+                            <div class="formationDescription">
+                                Ecole des Mines d'Albi-Carmaux, spécialité génie des systèmes d'information<br>
+                                   <span> Deux ans de formation généraliste : physique, mécanique, management, gestion de production et de projet, aide multicritère à la décision, recherche opérationnelle.<br>
+                                       Un an de spécialisation en génie des systèmes d'information : programmation(HTML, CSS, JAVA, Perl), réseaux, formatisme UML, systèmes d'exploitation et sécurité, machine learning, management agile. </span> 
+                            </div>
+                        </div>
+                        <div class="formation">
+                            <div class="formationIcone">  
+                            </div>
+                            <div class="formationDate">
+                                2014-2016
+                            </div>
+                            <div class="formationDescription">
+                                Lycée Victor Hugo, Besançon, CPGE Scientifique MPSI/MP<br>
+                                   <span> 2 ans de cours intensifs en mathématiques, physiques et information en préparation pour le concours aux grandes écoles d'ingénieurs.</span> 
+                            </div>
+                        </div>
+                        <div class="formation">
+                            <div class="formationIcone">  
+                            </div>
+                            <div class="formationDate">
+                                2011-2014
+                            </div>
+                            <div class="formationDescription">
+                                Lycée Georges Cuvier, Montbéliard<br>
+                                   <span> Baccalauréat scientifique. Mention bien. </span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" id="competence">
+                <div class="title" id="comp">
+                    <h3>Compétences</h3>
+                </div>
+                <div class="row" id="competences">
+                    <div class="col programmation">
+                        <h4 class="soustitre"> Programmation </h4>
+                            <div id="piechart1"></div>
+                            <div id="piechart2"></div>
+                    </div>
+                    <div class="col">
+                        <h4 class="soustitre"> Langues </h4>
+                        <div class="row twolanguages">
+                            <div>
+                                <div class="progress-bar-description">
+                                        Anglais (courant)
+                                </div>
+                                <div class="progress" style="width:150px">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                    </div>   
+                                </div>
+                                <div class="progress-bar-description" style="margin-top:100px">
+                                        Chinois (notions)
+                                </div>
+                                <div class="progress" style="width:150px">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                                    </div>   
+                                </div>
+                            </div>
+                            <div>
+                                <div class="progress-bar-description">
+                                        Allemand (notions)
+                                </div>
+                                <div class="progress" style="width:150px">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                                    </div>   
+                                </div>
+                                <div class="progress-bar-description" style="margin-top:100px">
+                                        LSF (notions)
+                                </div>
+                                <div class="progress" style="width:150px">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" id="hobby">
+                <div class="title" id="loisirs">
+                    <h3>Et en dehors du travail...</h3>
+                </div>
+                <div class="row hobbies">
+                        <h4 class="icone" style="background-image:url(musique.jpg)" onclick="ouvrirmusique()">Musique</h4>
+                        <h4 class="icone" style="background-image:url(sport.jpg)" onclick="ouvrirsport()">Sport</h4>
+                        <h4 class="icone" style="background-image:url(autres.jpg)" onclick="ouvrirautres()">Autres</h4>
+                </div>
+
+                <div id="music" style="display:none">
+                    <div class="row listeimage">
+                        <ul class="myUl col-sm-4" style="text-align:center">
+                            <li class="myli1" onmouseover="afficherpiano()" onmouseout="effacerpiano()">Piano (15 ans) - Pratique individuelle</li>
+                            <li class="myli2" onmouseover="affichervm()" onmouseout="effacervm()"> Clarinette (11 ans) - Pratique individuelle et collective</li>
+                            <li class="myli1" onmouseover="afficherorchestre()" onmouseout="effacerorchestre()"> Chef de l'orchestre de l'école des Mines d'Albi</li>
+                            <li class="myli2" onmouseover="afficherfanfare()" onmouseout="effacerfanfare()"> Responsable de la fanfare de l'école des Mines d'Albi</li>
+                        </ul>
+                        <div class="col-sm-6">
+                            <img src="piano.jpg" id="imgpiano" style="display:none" alt='piano'/>
+                            <img src="vm.jpg" id="imgvm" style="display:none" alt='vm'/>
+                            <img src="orchestre.jpg" id="imgorchestre" style="display:none" alt='orchestre'/>
+                            <img src="fanfare.jpg" id="imgfanfare" style="display:none" alt='fanfare'/>
+                        </div>
+                    </div>
+                </div>
+                <div id="sport" style="display:none">
+                    <div class="row listeimage">
+                        <ul class="myUl col-sm-4" style="text-align:center">
+                            <li class="myli1">Natation (5 ans)</li>
+                            <li class="myli2" onmouseover="affichervolley()" onmouseout="effacervolley()">Volleyball (3 ans)</li>
+                        </ul>
+                
+                        <div class="col-sm-6">
+                            <img src="volley.jpg" id="imgvolley" style="display:none" alt='veolley'/>
+                        </div>
+                    </div>
+                </div>
+               <div id="autre" style="display:none">
+                   <div class="row listeimage">
+                        <ul class="myUl col-sm-4" style="text-align:center">
+                            <li class="myli1" onmouseover="affichercrimines()" onmouseout="effacercrimines()"> Vice-présidente du bureau des élèves de l'école des Mines d'Albi</li>
+                            <li class="myli2" onmouseover="affichergala()" onmouseout="effacergala()"> Membre du pôle communication de l'organisation du gala de la promotion 2016</li>
+                        </ul>
+                    
+                        <div class="col-sm-6">
+                            <img src="Criminesall.jpg" id="imgcrimines" style="display:none" alt="viceprez"/>
+                            <img src="gala.jpg" id="imggala" style="display:none" alt="gala"/>
+                        </div>
+                    </div>
+               </div>
+            </div>
+          </div> 
+        </div>
+        <div class="baspage" style="background-color:#707176; color:white">
+            <div class="container-fluid text-center text-md-left">
+              <div class="row" style="margin-top:30px">
+                <div class="col-md-9 mt-md-0 mt-3" style="text-align:center;">
+                  <p style=" margin-top:40px">N'hésitez pas à me contacter si vous souhaitez plus d'informations ou si mon profil vous intéresse ! </p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <ul class="list-unstyled" >
+                      <li>
+                        <span>1 rue de pontarlier 25600 Sochaux</span>
+                      </li>
+                      <li>
+                        <span>06 08 12 38 48</span>
+                      </li>
+                      <li>
+                        <a href="mailto:cam.lescure@gmail.com" style="text-decoration:none; color:white;">cam.lescure@gmail.com</a>
+                      </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/camille-lescure-a5279912a/" style="margin-right:25px"><img src="linkedin.svg" width="25px" height="25px" </a>
+                        <a href="camille_lescure.pdf" style="margin-right:20px"><img src="cv.png" width="25px" height="25px"> </a>
+                        <a href="https://github.com/Camlescure"><img src="git.png" width="40px" height="25px"></a>
+                      </li>
+    
+                    </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var data1 = google.visualization.arrayToDataTable([
+          ['Language', 'Percentage of knowledge'],
+          ['HTML',40],
+          ['CSS', 40],
+          ['Javascript (angularJS)', 20],
+        ]);
+          var data2 = google.visualization.arrayToDataTable([
+          ['Language', 'Percentage of knowledge'],
+          ['Java',50],
+          ['C++',25],
+          ['Perl',25],
+        ]);
+
+          // Optional; add a title and set the width and height of the chart
+          var options1 = {'title':'Front-End', 'width':350, 'height':200, slices:{0:{color:'#415982'},1: {color:'#3f4482'}, 2:{color:'#5f3f82'}}};
+          var options2 = {'title':'Back-End', 'width':350, 'height':200, slices:{0:{color:'#415982'},1: {color:'#3f4482'}, 2:{color:'#5f3f82'}}};
+              
+
+          // Display the chart inside the <div> element with id="piechart"
+          var chart1 = new google.visualization.PieChart(document.getElementById('piechart1'));
+          chart1.draw(data1, options1);
+          var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+          chart2.draw(data2, options2);
+        }
+        
+        function ouvrirmusique(){
+            if (document.getElementById("music").style.display=="none"){
+                document.getElementById("music").style.display="block";
+                document.getElementById("sport").style.display="none";
+                document.getElementById("autre").style.display="none";
+            }
+            else if(document.getElementById("music").style.display="block"){
+                document.getElementById("music").style.display="none";
+
+            }
+        }
+        function ouvrirsport(){
+            if (document.getElementById("sport").style.display=="none"){
+                document.getElementById("sport").style.display="block";
+                document.getElementById("music").style.display="none";
+                document.getElementById("autre").style.display="none";
+            }
+            else if(document.getElementById("sport").style.display="block"){
+                document.getElementById("sport").style.display="none";
+
+            }
+        }
+        function ouvrirautres(){
+            if (document.getElementById("autre").style.display=="none"){
+                document.getElementById("autre").style.display="block";
+                document.getElementById("music").style.display="none";
+                document.getElementById("sport").style.display="none";
+            }
+            else if(document.getElementById("autre").style.display="block"){
+                document.getElementById("autre").style.display="none";
+            }
+        }
+        function afficherpiano(){
+            document.getElementById("imgpiano").style.display="block";
+        }
+        function effacerpiano(){
+            document.getElementById("imgpiano").style.display="none";
+        }
+        function afficherorchestre(){
+            document.getElementById("imgorchestre").style.display="block";
+        }
+        function effacerorchestre(){
+            document.getElementById("imgorchestre").style.display="none";
+        }
+        function afficherfanfare(){
+            document.getElementById("imgfanfare").style.display="block";
+        }
+        function effacerfanfare(){
+            document.getElementById("imgfanfare").style.display="none";
+        }
+        function affichervolley(){
+            document.getElementById("imgvolley").style.display="block";
+        }
+        function effacervolley(){
+            document.getElementById("imgvolley").style.display="none";
+        }
+         function affichercrimines(){
+            document.getElementById("imgcrimines").style.display="block";
+        }
+        function effacercrimines(){
+            document.getElementById("imgcrimines").style.display="none";
+        }
+        function affichergala(){
+            document.getElementById("imggala").style.display="block";
+        }
+        function effacergala(){
+            document.getElementById("imggala").style.display="none";
+        }
+        function affichervm(){
+            document.getElementById("imgvm").style.display="block";
+        }
+        function effacervm(){
+            document.getElementById("imgvm").style.display="none";
+        }        
+</script>
+</html>
+
